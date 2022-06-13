@@ -1,0 +1,31 @@
+@import '../../../../../assets/mixins';
+
+
+.user_menu-small {
+  display: none !important;
+  @include respond(IPad) {
+    display: block !important;
+    margin-right: 25px;
+    cursor: pointer;
+  }
+}
+
+.user_menu-big {
+  cursor: pointer;
+  margin-right: 50px;
+  display: block !important;
+  @include respond(big-tablets) {
+    margin-right: 25px;
+  }
+  @include respond(IPad) {
+    display: none !important;
+  }
+}
+
+.mobile-function{
+  display: none;
+  @include respond(IPad) {
+    display: block;
+  }
+}
+

@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import "components/UI/variables";
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 100%;
+}
+
+.content_body {
+  min-height: calc(100vh - 368px);
+}
+
+.ant-checkbox-wrapper:hover .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus + .ant-checkbox-inner {
+  border-color: $primary3 !important;
+}
+
+.ant-input:hover {
+  border-color: $primary3 !important;
+}
+
+.ant-input:focus, .ant-input-focused {
+  border-color: $primary3 !important;
+  box-shadow: 0 0 0 2px rgb(144 255 24 / 20%) !important;
+}
+
+.ant-input-number:focus, .ant-input-number-focused {
+  border-color: $primary3 !important;
+  box-shadow: 0 0 0 2px rgb(144 255 24 / 20%) !important;
+}

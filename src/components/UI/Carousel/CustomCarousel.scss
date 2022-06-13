@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+@import '../../../assets/mixins.scss';
+@import '../../../components/UI/variables';
+
+
+.carousel {
+  position: relative;
+  width: 672px;
+}
+
+.contentStyle {
+  height: 720px;
+  width: 672px;
+}
+
+.content-slider {
+  justify-content: flex-end;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  @include respond(small-phone) {
+    margin: 10px;
+    padding: 0;
+  }
+}
+
+.booking-region {
+  font-size: 14px;
+  line-height: 24px;
+  color: $primary2;
+  margin-left: 50px;
+  position: absolute;
+  bottom: 15%;
+  left: 82px;
+}
+
+.booking-region::before {
+  content: '';
+  position: absolute;
+  height: 16px;
+  width: 14px;
+  bottom: 5px;
+  left: -20px;
+  background-image: url("../../../assets/icons/i-location-w.svg");
+}
+
+.booking-name {
+  font-weight: 300;
+  font-size: 40px;
+  line-height: 110%;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: $primary2;
+  margin-left: 50px;
+  position: absolute;
+  bottom: 5%;
+  left: 60px;
+}
+
+.carousel-prev {
+  @include respond(big-tablets) {
+    display: none;
+  }
+}
+
+.carousel-next {
+  @include respond(big-tablets) {
+    display: none;
+  }
+}
+
+.first-slide {
+  position: relative;
+  background-image: url('../../../assets/img/village-nomads.jpg');
+  background-size: 623px 760px;
+  background-position-x: 50px;
+  background-repeat: no-repeat;
+  //@include respond(big-tablets) {
+  //  background-image:
+  //  url('./../../../assets/img/slide-1-mobile.jpg');
+  //  background-size: cover;
+  //  background-position: center;
+  //}
+}
+
+.second-slide {
+  position: relative;
+  background-image: url('../../../assets/img/mega-dacha.jpg');
+  background-size: 623px 760px;
+  background-position-x: 50px;
+  background-repeat: no-repeat;
+  //@include respond(big-tablets) {
+  //  background-image:
+  //  url('./../../../assets/img/slide-2-mobile.gif');
+  //  background-size: cover;
+  //  background-position: center;
+  //}
+}
+
+.third-slide {
+  position: relative;
+  background-image: url('../../../assets/img/apple-farm.jpg');
+  background-size: 623px 760px;
+  background-position-x: 50px;
+  background-repeat: no-repeat;
+  //@include respond(big-tablets) {
+  //  background-image:
+  //  url('./../../../assets/img/slide-3-mobile.jpg');
+  //  background-size: cover;
+  //  background-position: center;
+  //}
+}
+
+.carousel-prev {
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  z-index: 9999999;
+  cursor: pointer;
+}
+
+.carousel-next {
+  position: absolute;
+  right: 6%;
+  top: 50%;
+  z-index: 9999999;
+  cursor: pointer;
+}

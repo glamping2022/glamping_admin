@@ -1,0 +1,7 @@
+@import './src/components/UI/variables';
+@import '../../../assets/mixins.scss';
+
+.product-form {
+  @extend %caption2;
+  text-transform: none;
+}

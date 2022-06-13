@@ -1,0 +1,140 @@
+@import '../../../assets/mixins.scss';
+@import '../_variables';
+
+.footer-container {
+  margin-left: 20px;
+  @include respond(big-tablets) {
+    margin-left: 30px;
+  }
+  @include respond(IPad) {
+    margin-left: 15px;
+  }
+  @include respond(small-tablets) {
+    margin-left: 20px !important;
+  }
+  @include respond(Iphone5) {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.ant-layout-footer {
+  background-color: $primary1;
+  padding: 25px 0;
+}
+
+.ant-row.footer-elements {
+  flex-wrap: wrap;
+  margin: 0 30px;
+  @include respond(big-tablets) {
+    margin: 0 10px;
+  }
+  @include respond(IPad) {
+    margin: 0 10px;
+  }
+  @include respond(small-phone) {
+    margin: 0 20px;
+    display: block;
+  }
+}
+
+.ant-list-item {
+  @include respond(Iphone5) {
+    width: 260px;
+  }
+}
+
+.ant-col.footer-container__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  //margin-right: 25px;
+  @include respond(IPad) {
+    padding: 0 20px;
+    margin: 20px 0;
+  }
+  @include respond(small-phone) {
+    margin: 20px 0;
+  }
+}
+
+.links__list {
+  margin-right: 50px;
+  @include respond(big-tablets) {
+    margin-right: 10px;
+  }
+  @include respond(IPad) {
+    margin-right: 10px !important;
+  }
+  @include respond(small-phone) {
+    margin: 20px 0;
+  }
+}
+
+.footer-container__text {
+  color: $primary5;
+  @extend %caption3;
+  margin-top: -5px;
+  margin-bottom: 4px;
+}
+
+.footer-container__text_tel {
+  @extend %caption3;
+}
+
+.footer-container__text_tel:hover {
+  color: $primary3;
+}
+
+
+.footer-container__text_addr {
+  font-size: 14px;
+  line-height: 24px;
+  color: $primary5;
+  margin-top: -10px;
+}
+
+.footer-container__text_copy {
+  font-size: 12px;
+  line-height: 12px;
+  color: $primary5;
+  text-align: left;
+  margin-top: -5px;
+  @include respond(big-tablets) {
+    padding-left: 0;
+  }
+}
+
+.socials {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.socials__link {
+  display: block;
+  padding-right: 10px;
+}
+
+.socials__link:hover {
+  transform: scale(1.2)
+}
+
+.footer__hover {
+  &:hover{
+    color: $primary3;
+  }
+}
+
+.ant-col-8 {
+  align-items: start;
+  @include respond(big-tablets) {
+    max-width: 50%;
+    margin: 0 20px;
+  }
+
+  @include respond(small-tablets) {
+    max-width: 100%;
+    margin: 0;
+  }
+}

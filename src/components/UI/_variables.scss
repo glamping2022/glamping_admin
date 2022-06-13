@@ -1,0 +1,124 @@
+$primary1: #1A1A1A;
+$primary2: #FFFFFF;
+$primary3: #7AB054;
+$primary4: #404040;
+$primary5: #808080;
+$primary6: #E5E5E5;
+
+%caption1 {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+%caption2 {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+%caption3 {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+}
+
+%caption4 {
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+%caption5 {
+  color: $primary5;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+%caption6 {
+  color: $primary1;
+  font-size: 16px;
+  line-height: 28px;
+  font-weight: 300;
+}
+
+%contentText {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+%textBold {
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: $primary1;
+}
+
+%textLocation {
+  font-size: 14px;
+  line-height: 16px;
+  color: $primary5;
+}
+
+%textCost {
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: $primary1;
+}
+
+%text-btn {
+  padding: 8px 16px;
+  font-size: 16px;
+  line-height: 20px;
+  color: $primary2;
+  background: $primary3;
+  border: none;
+  cursor: pointer;
+  &:hover {
+    color: $primary1;
+  }
+}
+
+%btn {
+  padding: 8px 16px;
+  width: 170px;
+  color: $primary1;
+}
+
+%textGreen {
+  font-size: 16px;
+  line-height: 20px;
+  color: $primary3;
+  border: none;
+  cursor: pointer;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-color: inherit;
+  margin-left: 20px;
+}
+
+%bg-white {
+  background: $primary2;
+  border: 2px solid $primary3;
+  box-sizing: border-box;
+}
+
+%bg-green {
+  background: $primary3;
+  width: 148px;
+}
+
+%i-image {
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  color: $primary5;
+  font-size: 14px;
+  line-height: 24px;
+}
