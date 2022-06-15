@@ -18,7 +18,7 @@ import {
 // import accommodationsReducer from './reducers/accommodationReducer';
 // import categoriesReducer from './reducers/categoriesReducer';
 // import factoriesReducer from './reducers/factoriesReducer';
-// import locationReducer from './reducers/locationsReducer';
+import locationReducer from './reducers/locationsReducer';
 // import pichesReducer from './reducers/pichesReducer';
 // import productApplicationsReducer from './reducers/productApplicationReducer';
 // import productsReducer from './reducers/productsReducer';
@@ -39,7 +39,7 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const rootReducer = combineReducers({
   users: usersReducer,
   // products: productsReducer,
-  // locations: locationReducer,
+  locations: locationReducer,
   // categories: categoriesReducer,
   // factories: factoriesReducer,
   // reservations: reservationsReducer,

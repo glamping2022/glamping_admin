@@ -1,10 +1,22 @@
 @import '../../../../assets/mixins.scss';
+@import '../../../../components/UI/variables';
 
 .about_app {
   background-color: #F9FAF7;
   @include respond(big-tablets) {
     padding: 10px;
   }
+}
+
+#container{
+  height: 1500px;
+}
+
+#content-1{
+  width: 1700px;
+}
+.applicationGlamping{
+  margin: 110px auto;
 }
 
 .about_app .title {
@@ -34,3 +46,126 @@
 .link:hover {
   color: #c4e0a6;
 }
+
+.ant-menu-title-content {
+  font-size: 20px;
+}
+
+.ant-menu-title-content:hover {
+  color: $primary3;
+}
+
+.ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+  background-color: $primary5;
+}
+
+.tabs { 
+  width: 2000px; 
+  padding: 0px; 
+  margin: 0; 
+  position: relative; 
+  border: 1px solid #DEE8F2; 
+} 
+section { 
+  display: none;  
+  padding: 15px; 
+  background: white; 
+  position: absolute; 
+  top: 0; 
+  left: 180px; 
+} 
+p { 
+  margin: 0; 
+} 
+input { 
+  display: none; 
+} 
+label { 
+  display: block; 
+  width: 180px; 
+  padding: 15px; 
+  color: #4F5966; 
+  background: #DEE8F2; 
+  cursor: pointer; 
+} 
+label:hover {  
+  color: $primary3;
+} 
+input:checked + label { 
+  color: $primary3; 
+  background: white; 
+} 
+#tab1:checked ~ #content1, #tab2:checked ~ #content2, #tab3:checked ~ #content3, #tab4:checked ~ #content4, #tab5:checked ~ #content5,
+#tab6:checked ~ #content6, #tab7:checked ~ #content7, #tab8:checked ~ #content8, #tab9:checked ~ #content9, #tab10:checked ~ #content10, #tab11:checked ~ #content11 { 
+  display: block; 
+}
+section { 
+  animation: scale 0.7s ease-in-out; 
+} 
+@keyframes scale { 
+  0% { 
+  transform: scale(0.9); 
+  opacity: 0; 
+  } 
+  50% { 
+  transform: scale(1.005); 
+  opacity: 0.5; 
+  } 
+  100% { 
+  transform: scale(1); 
+  opacity: 1; 
+  } 
+}
+
+.InSide {
+  font-size: 0;
+}
+
+.InSide>input[type="radio"] {
+  display: none;
+}
+
+.InSide>div {
+  /* скрыть контент по умолчанию */
+  display: none;
+  border: 1px solid #e0e0e0;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+
+/* отобразить контент, связанный с вабранной радиокнопкой (input type="radio") */
+#tab-btn-1:checked~#content-1,
+#tab-btn-2:checked~#content-2,
+#tab-btn-3:checked~#content-3,
+#tab-btn-4:checked~#content-4,
+#tab-btn-5:checked~#content-5,
+#tab-btn-6:checked~#content-6 {
+  display: block;
+}
+
+.InSide>label {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  padding: 2px 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  cursor: pointer;
+  position: relative;
+  top: 1px;
+}
+
+.InSide>label:not(:first-of-type) {
+  border-left: none;
+}
+
+.InSide>input[type="radio"]:checked+label {
+  background-color: #fff;
+  border-bottom: 1px solid #fff;
+}
+
+

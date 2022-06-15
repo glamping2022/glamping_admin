@@ -4,7 +4,7 @@ import { bindActionCreators } from 'redux';
 // import * as AccommodationsActionCreator from '../store/actions/accommodationsAction';
 // import * as CategoriesActionCreators from '../store/actions/categoriesAction';
 // import * as FactoryActionCreator from '../store/actions/factoriesAction';
-// import * as LocationsActionCreators from '../store/actions/locationsAction';
+import * as LocationsActionCreators from '../store/actions/locationsAction';
 // import * as PichActionCreators from '../store/actions/pichesAction';
 // import * as PitchActionCreator from '../store/actions/pichesAction';
 // import * as ApplicationsProductActionCreator from '../store/actions/productApplicationAction';
@@ -17,7 +17,7 @@ import * as UserActionCreators from '../store/actions/usersAction';
 const ActionCreators = {
   ...UserActionCreators,
   // ...ProductActionCreators,
-  // ...LocationsActionCreators,
+   ...LocationsActionCreators,
   // ...CategoriesActionCreators,
   // ...FactoryActionCreator,
   // ...PichActionCreators,

@@ -1,0 +1,56 @@
+@import '../../assets/mixins.scss';
+@import '../../components/UI/variables';
+
+.gutter-row {
+  margin: 10px;
+}
+
+.location-body {
+  background-color: $primary2;
+}
+
+.ant-layout-content {
+  text-align: center;
+}
+
+.location-content {
+  @include respond(small-phone) {
+    margin-left: -30px;
+  }
+  @include respond(big-tablets) {
+    justify-content: space-around;
+  }
+}
+
+.pagination-locations {
+  margin: 30px 0 30px -84%;
+  @include respond(regular-desktop) {
+    margin-left: -81%;
+  }
+  @include respond(big-tablets) {
+    margin-left: -63%;
+  }
+  @include respond(IPad) {
+    margin-left: 0;
+  }
+  @include respond(Iphone6) {
+    margin-left: -35%;
+  }
+}
+
+.button-back {
+  margin-left: -84%;
+  margin-bottom: 30px;
+  @include respond(regular-desktop) {
+    margin-left: -81%;
+  }
+  @include respond(big-tablets) {
+    margin-left: -63%;
+  }
+  @include respond(IPad) {
+    margin-left: 0;
+  }
+  @include respond(Iphone6) {
+    margin-left: -35%;
+  }
+}

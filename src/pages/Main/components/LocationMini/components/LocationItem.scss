@@ -1,0 +1,122 @@
+@import '../../../../../assets/mixins.scss';
+@import '../../../../../components/UI/variables';
+
+.ant-card-body {
+  @include respond(Iphone6) {
+    padding: 8px 20px 0;
+  }
+}
+
+.location-item__card {
+  height: 428px;
+  width: 320px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  @include respond(Iphone6) {
+    display: flex;
+    max-width: 300px;
+    height: 84px;
+  }
+}
+
+.item__title {
+  @include respond(Iphone6) {
+    margin: 0;
+  }
+}
+
+.location__button {
+  @extend %text-btn;
+
+  &:hover {
+    background-color: $primary3;
+  }
+}
+
+//.ant-card-meta-title {
+//  font-size: 24px;
+//  @include respond(Iphone6) {
+//    margin-top: 8px !important;
+//    margin-bottom: 0 !important;
+//    font-size: 14px !important;
+//    line-height: 170% !important;
+//    text-align: left !important;
+//  }
+//}
+//
+//.ant-card-body {
+//  padding: 0 24px;
+//  text-align: center;
+//
+//  @include respond(small-tablets) {
+//    padding: 0;
+//  }
+//  @include respond(Iphone6) {
+//    text-align: left !important;
+//  }
+//}
+
+.item__square {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  color: #1A1A1A;
+  margin-bottom: 0;
+  @include respond(Iphone6) {
+    display: none;
+  }
+}
+
+.item__place {
+  @extend %textLocation;
+  margin-bottom: 12px;
+  padding-right: 15px;
+  @include respond(Iphone6) {
+    margin-bottom: 0;
+    padding-right: 0;
+    text-align: left;
+  }
+
+  &::before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    background-image: url('../../../../../assets/img/location_grey.png');
+    background-repeat: no-repeat;
+    @include respond(Iphone6) {
+      display: none;
+    }
+  }
+}
+
+.location__button {
+  @extend %text-btn;
+  margin-bottom: 25px;
+  @include respond(Iphone6) {
+    font-size: 14px;
+    padding: 0;
+    background-color: $primary2;
+    color: $primary3;
+    float: left;
+    margin-bottom: 0;
+    &:hover {
+      color: $primary1;
+      background-color: $primary2;
+    }
+  }
+}
+
+.item__location-img {
+  width: 320px;
+  height: 260px;
+  @include respond(Iphone6) {
+    width: 108px;
+    height: 84px;
+  }
+}

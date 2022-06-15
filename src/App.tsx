@@ -1,7 +1,11 @@
 import React from 'react';
 
 import { Layout } from 'antd';
-import { Route, Switch, useLocation } from 'react-router';
+import {
+  Route,
+  Switch,
+  useLocation,
+} from 'react-router';
 
 import AppToolbar from './components/UI/AppToolbar/AppToolbar';
 import CustomFooter from './components/UI/CustomFooter/CustomFooter';
