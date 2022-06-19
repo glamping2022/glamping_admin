@@ -4,6 +4,7 @@ import React, { useEffect } from 'react';
 
 import {
   Col,
+  Input,
   Layout,
   Pagination,
   Row,
@@ -51,31 +52,31 @@ const AboutApp: React.FC = () => {
   
   return (
     <div id="container"> 
-      <div className="tabs"> 
-        <input id="tab1" type="radio" name="tabs"/> 
+      <div className="tabs">
+        <Input className="tab" id="tab1" type="radio" name="tabs"/> 
           <label htmlFor="tab1">Новые заявки</label> 
-        <input id="tab2" type="radio" name="tabs"/> 
+        <Input className="tab" id="tab2" type="radio" name="tabs"/> 
           <label htmlFor="tab2">Глэмпинги</label> 
-        <input id="tab3" type="radio" name="tabs"/> 
+        <Input className="tab" id="tab3" type="radio" name="tabs"/> 
           <label htmlFor="tab3">Магазин</label> 
-        <input id="tab4" type="radio" name="tabs"/> 
+        <Input className="tab" id="tab4" type="radio" name="tabs"/> 
           <label htmlFor="tab4">Инвесторы</label>
-        <input id="tab5" type="radio" name="tabs"/> 
+        <Input className="tab" id="tab5" type="radio" name="tabs"/> 
           <label htmlFor="tab5">Потенциальные инвесторы</label> 
         <section id="content1"> 
           <div className="InSide">
-            <input type="radio" name="tab-btn" id="tab-btn-1" value=""/>
-            <label htmlFor="tab-btn-1">Заявки на создание глэмпинга</label>
-            <input type="radio" name="tab-btn" id="tab-btn-2" value=""/>
-            <label htmlFor="tab-btn-2">Заявки на бронирование питчи</label>
-            <input type="radio" name="tab-btn" id="tab-btn-3" value=""/>
-            <label htmlFor="tab-btn-3">Заявки на создание размешения(sharing)</label>
-            <input type="radio" name="tab-btn" id="tab-btn-4" value=""/>
-            <label htmlFor="tab-btn-4">Заявки на продажу модуля</label>
-            <input type="radio" name="tab-btn" id="tab-btn-5" value=""/>
-            <label htmlFor="tab-btn-5">Заявки на покупку модуля</label>
-            <input type="radio" name="tab-btn" id="tab-btn-6" value=""/>
-            <label htmlFor="tab-btn-6">Комментарии / Отзывы</label>
+            <Input className="tab" type="radio" name="tab-btn" id="tab-btn-1" value=""/>
+              <label htmlFor="tab-btn-1">Заявки на создание глэмпинга</label>
+            <Input className="tab" type="radio" name="tab-btn" id="tab-btn-2" value=""/>
+              <label htmlFor="tab-btn-2">Заявки на бронирование питчи</label>
+            <Input className="tab" type="radio" name="tab-btn" id="tab-btn-3" value=""/>
+              <label htmlFor="tab-btn-3">Заявки на создание размешения(sharing)</label>
+            <Input className="tab" type="radio" name="tab-btn" id="tab-btn-4" value=""/>
+              <label htmlFor="tab-btn-4">Заявки на продажу модуля</label>
+            <Input className="tab" type="radio" name="tab-btn" id="tab-btn-5" value=""/>
+              <label htmlFor="tab-btn-5">Заявки на покупку модуля</label>
+            <Input className="tab" type="radio" name="tab-btn" id="tab-btn-6" value=""/>
+              <label htmlFor="tab-btn-6">Комментарии / Отзывы</label>
             <div id="content-1">
               <Layout className='applicationGlamping'>
                 <Content>
