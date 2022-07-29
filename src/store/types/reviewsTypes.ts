@@ -5,6 +5,7 @@ export interface IReview {
   review: string;
   date: any;
   user: any;
+  published: boolean;
   rating: number;
   accommodation?: any;
 }
@@ -65,7 +66,6 @@ interface IFetchReviewPagesErrorAction {
 interface IFetchReviewsSuccessAction {
   type: ReviewsActionTypes.FETCH_REVIEWS_SUCCESS;
   payload: Array<IReview>;
-  page: number;
 }
 
 interface IFetchReviewsFailureAction {

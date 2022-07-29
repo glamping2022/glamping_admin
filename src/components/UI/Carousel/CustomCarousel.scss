@@ -3,7 +3,6 @@
 @import '../../../assets/mixins.scss';
 @import '../../../components/UI/variables';
 
-
 .carousel {
   position: relative;
   width: 672px;
@@ -42,7 +41,7 @@
   width: 14px;
   bottom: 5px;
   left: -20px;
-  background-image: url("../../../assets/icons/i-location-w.svg");
+  background-image: url('../../../assets/icons/i-location-w.svg');
 }
 
 .booking-name {

@@ -6,7 +6,7 @@ import AboutApp from './components/AboutApp/AboutApp';
 const Main: React.FC = () => {
   return (
     <>
-      <AboutApp/>
+      <AboutApp />
       <CustomFooter />
     </>
   );

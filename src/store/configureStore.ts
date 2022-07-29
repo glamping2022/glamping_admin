@@ -15,16 +15,16 @@ import {
   getUserFromLocalStorage,
   setUserToLocalStorage,
 } from '../helpers/localStorage';
-// import accommodationsReducer from './reducers/accommodationReducer';
-// import categoriesReducer from './reducers/categoriesReducer';
-// import factoriesReducer from './reducers/factoriesReducer';
+import accommodationsReducer from './reducers/accommodationReducer';
+import categoriesReducer from './reducers/categoriesReducer';
+import factoriesReducer from './reducers/factoriesReducer';
 import locationReducer from './reducers/locationsReducer';
-// import pichesReducer from './reducers/pichesReducer';
-// import productApplicationsReducer from './reducers/productApplicationReducer';
-// import productsReducer from './reducers/productsReducer';
-// import reservationsReducer from './reducers/reservationsReducer';
-// import reviewsReducer from './reducers/reviewsReducer';
-// import sharingReducer from './reducers/sharingReducer';
+import pichesReducer from './reducers/pichesReducer';
+import productApplicationsReducer from './reducers/productApplicationReducer';
+import productsReducer from './reducers/productsReducer';
+import reservationsReducer from './reducers/reservationsReducer';
+import reviewsReducer from './reducers/reviewsReducer';
+import sharingReducer from './reducers/sharingReducer';
 import usersReducer from './reducers/usersReducer';
 
 declare global {
@@ -38,16 +38,16 @@ const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
   users: usersReducer,
-  // products: productsReducer,
+  products: productsReducer,
   locations: locationReducer,
-  // categories: categoriesReducer,
-  // factories: factoriesReducer,
-  // reservations: reservationsReducer,
-  // piches: pichesReducer,
-  // reviews: reviewsReducer,
-  // accommodations: accommodationsReducer,
-  // productApplications: productApplicationsReducer,
-  // sharing: sharingReducer,
+  categories: categoriesReducer,
+  factories: factoriesReducer,
+  reservations: reservationsReducer,
+  piches: pichesReducer,
+  reviews: reviewsReducer,
+  accommodations: accommodationsReducer,
+  productApplications: productApplicationsReducer,
+  sharing: sharingReducer,
   router: connectRouter(history),
 });
 export type rootState = ReturnType<typeof rootReducer>;

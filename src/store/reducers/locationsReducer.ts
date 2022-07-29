@@ -1,9 +1,13 @@
-import { ILocationsState, LocationsAction, LocationsActionTypes } from '../types/locationsTypes';
+import {
+  ILocationsState,
+  LocationsAction,
+  LocationsActionTypes,
+} from '../types/locationsTypes';
 
 const initialState: ILocationsState = {
   locations: [],
   locationsMap: [],
-  pages: '',
+  pagesLocations: '',
   currentPage: 0,
   lastFourLocations: [],
   currentLocation: {},
@@ -13,7 +17,7 @@ const initialState: ILocationsState = {
 const locationsReducer = (state = initialState, action: LocationsAction): ILocationsState => {
   switch (action.type) {
     case LocationsActionTypes.FETCH_LOCATION_PAGES:
-      return { ...state, pages: action.payload };
+      return { ...state, pagesLocations: action.payload };
     case LocationsActionTypes.FETCH_LOCATION_PAGES_ERROR:
       return { ...state, error: action.payload };
     case LocationsActionTypes.FETCH_LOCATIONS_SUCCESS:

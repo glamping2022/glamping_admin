@@ -2,12 +2,7 @@ import './CustomFooter.scss';
 
 import React from 'react';
 
-import {
-  Col,
-  Layout,
-  List,
-  Row,
-} from 'antd';
+import { Col, Layout, List, Row } from 'antd';
 import { Link } from 'react-router-dom';
 
 import glamping_icon from '../../../assets/icons/glamping_footer.svg';

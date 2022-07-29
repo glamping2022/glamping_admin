@@ -10,6 +10,7 @@ export interface IApplicationProduct {
   _id: string;
   poductId: IProduct;
   userId: IUser;
+  published: boolean;
 }
 
 export interface IApplicationsProductState {

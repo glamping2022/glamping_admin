@@ -1,0 +1,10 @@
+@import '../../../../../components/UI/variables';
+@import '../../../../../assets/mixins';
+
+.item__button {
+  @extend %text-btn;
+  margin-bottom: 25px;
+  &:hover {
+    color: $primary1;
+  }
+}

@@ -1,6 +1,5 @@
 @import '../../../../../assets/mixins';
 
-
 .user_menu-small {
   display: none !important;
   @include respond(IPad) {
@@ -22,10 +21,9 @@
   }
 }
 
-.mobile-function{
+.mobile-function {
   display: none;
   @include respond(IPad) {
     display: block;
   }
 }
-

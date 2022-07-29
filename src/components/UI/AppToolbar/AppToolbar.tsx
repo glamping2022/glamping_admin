@@ -12,7 +12,6 @@ import DropdownMenu from './Menus/components/DropdownMenu/DropdownMenu';
 const AppToolbar: React.FC = () => {
   const { user } = useTypedSelectorHook(state => state.users);
 
-
   const addActiveClass = (e: any) => {
     const classes = document.querySelectorAll('a');
     for (let i = 0; i < classes.length; i++) {

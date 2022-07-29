@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
-@import "components/UI/variables";
+@import 'components/UI/variables';
 
 body {
   margin: 0;
@@ -19,7 +19,9 @@ body {
   min-height: calc(100vh - 368px);
 }
 
-.ant-checkbox-wrapper:hover .ant-checkbox-inner, .ant-checkbox:hover .ant-checkbox-inner, .ant-checkbox-input:focus + .ant-checkbox-inner {
+.ant-checkbox-wrapper:hover .ant-checkbox-inner,
+.ant-checkbox:hover .ant-checkbox-inner,
+.ant-checkbox-input:focus + .ant-checkbox-inner {
   border-color: $primary3 !important;
 }
 
@@ -27,12 +29,14 @@ body {
   border-color: $primary3 !important;
 }
 
-.ant-input:focus, .ant-input-focused {
+.ant-input:focus,
+.ant-input-focused {
   border-color: $primary3 !important;
   box-shadow: 0 0 0 2px rgb(144 255 24 / 20%) !important;
 }
 
-.ant-input-number:focus, .ant-input-number-focused {
+.ant-input-number:focus,
+.ant-input-number-focused {
   border-color: $primary3 !important;
   box-shadow: 0 0 0 2px rgb(144 255 24 / 20%) !important;
 }

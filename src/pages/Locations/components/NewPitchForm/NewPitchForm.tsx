@@ -1,12 +1,6 @@
 import React, { useState } from 'react';
 
-import {
-  Button,
-  Form,
-  Input,
-  Typography,
-  Upload,
-} from 'antd';
+import { Button, Form, Input, Typography, Upload } from 'antd';
 import Paragraph from 'antd/lib/typography/Paragraph';
 import { UploadFile } from 'antd/lib/upload/interface';
 import { useHistory } from 'react-router-dom';
@@ -41,7 +35,6 @@ const normFile = (e: any) => {
   return e && e.fileList;
 };
 
-
 const NewPitch: React.FC = () => {
   const history = useHistory();
   const { createPitch } = useActions();
@@ -71,7 +64,6 @@ const NewPitch: React.FC = () => {
     setDisable(true);
     history.goBack();
   };
-
 
   return (
     <div className='pitch__detail'>
@@ -163,7 +155,6 @@ const NewPitch: React.FC = () => {
         </Form.Item>
       </Form>
     </div>
-    
   );
 };
 
