@@ -76,4 +76,4 @@ export type ReservationsPitchAction =
   | IFetchReservationsPitchOfUserSuccessAction
   | IFetchReservationsPitchOfUserFailureAction
   | IFetchReservationsPitchOfLandOwnerSuccessAction
-  | IFetchReservationsPitchOfLandOwnerFailureAction
+  | IFetchReservationsPitchOfLandOwnerFailureAction;

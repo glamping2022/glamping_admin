@@ -29,7 +29,7 @@ export interface ILocationsState {
   locationsMap: Array<ILocation> | [];
   lastFourLocations: Array<ILocation> | [];
   currentLocation: Partial<ILocation>;
-  pages: ILocationPage | {};
+  pagesLocations: ILocationPage | {};
   currentPage: number;
   error: null | string;
 }

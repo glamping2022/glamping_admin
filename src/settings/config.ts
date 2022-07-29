@@ -1,7 +1,6 @@
 let portVar = 8000;
 let host = 'http://localhost';
 
-
 if (process.env.REACT_APP_CI) {
   host = 'http://glampings.kz';
   portVar = 8001;

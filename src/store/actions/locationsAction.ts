@@ -1,9 +1,16 @@
-import { Dispatch } from 'redux';
 import { notification } from 'antd';
-import { errNotify } from '../exceptions/api-error';
+import {
+  CallHistoryMethodAction,
+  push,
+} from 'connected-react-router';
+import { Dispatch } from 'redux';
+
 import ax from '../../settings/axios-glamping';
-import { LocationsAction, LocationsActionTypes } from '../types/locationsTypes';
-import { CallHistoryMethodAction, push } from 'connected-react-router';
+import { errNotify } from '../exceptions/api-error';
+import {
+  LocationsAction,
+  LocationsActionTypes,
+} from '../types/locationsTypes';
 
 export const fetchLocations = (): any => {
   return async (dispatch: Dispatch<LocationsAction>) => {
@@ -16,6 +23,21 @@ export const fetchLocations = (): any => {
       dispatch({ type: LocationsActionTypes.FETCH_LOCATIONS_FAILURE, payload: 'Ошибка при получении данных' });
       errNotify('Неудача!', 'Произошла ошибка при получении данных!', error);
       dispatch({ type: LocationsActionTypes.FETCH_LOCATION_PAGES_ERROR, payload: 'Ошибка при получении данных' });
+      errNotify('Неудача!', 'Произошла ошибка при получении данных!', error);
+    }
+  };
+};
+
+export const fetchAllLocations = (): any => {
+  return async (dispatch: Dispatch<LocationsAction>) => {
+    try {
+      const response = await ax.get('locations');
+      dispatch({ type: LocationsActionTypes.FETCH_LOCATIONS_SUCCESS, payload: response.data });
+    } catch (error) {
+      dispatch({
+        type: LocationsActionTypes.FETCH_LOCATIONS_FAILURE,
+        payload: 'Ошибка при получении данных',
+      });
       errNotify('Неудача!', 'Произошла ошибка при получении данных!', error);
     }
   };

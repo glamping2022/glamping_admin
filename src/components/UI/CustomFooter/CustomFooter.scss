@@ -87,7 +87,6 @@
   color: $primary3;
 }
 
-
 .footer-container__text_addr {
   font-size: 14px;
   line-height: 24px;
@@ -117,11 +116,11 @@
 }
 
 .socials__link:hover {
-  transform: scale(1.2)
+  transform: scale(1.2);
 }
 
 .footer__hover {
-  &:hover{
+  &:hover {
     color: $primary3;
   }
 }

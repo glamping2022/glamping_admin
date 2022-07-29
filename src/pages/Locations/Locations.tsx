@@ -20,7 +20,7 @@ const { Content } = Layout;
 const Locations: React.FC = () => {
   const { user } = useTypedSelectorHook(state => state.users);
   document.documentElement.scrollTop = 0;
-  const { locations, pages } = useTypedSelectorHook(state => state.locations);
+  const { locations, pagesLocations } = useTypedSelectorHook(state => state.locations);
   const { fetchLocations } = useActions();
   const { fetchNextLocationPages } = useActions();
 
@@ -32,7 +32,7 @@ const Locations: React.FC = () => {
     fetchNextLocationPages(pageNumber - 1);
   };
 
-  const totalPages = Number(pages) * 10;
+  const totalPages = Number(pagesLocations) * 10;
   const noPages = totalPages < 1;
 
   const locationsList = locations.map(location => {
@@ -49,7 +49,7 @@ const Locations: React.FC = () => {
       </Col>
     );
   });
-  
+
   return (
     <div className='container'>
       <Layout className='location-body'>
@@ -61,9 +61,7 @@ const Locations: React.FC = () => {
           <div className='button-back'>
             <GoBack />
           </div>
-          {user?.role === 'user' ? 
-            <h2>ADMIN!!!</h2> : null
-          }
+          {user?.role === 'user' ? <h2>ADMIN!!!</h2> : null}
         </Content>
       </Layout>
     </div>

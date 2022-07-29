@@ -12,7 +12,6 @@ const UserMenu: React.FC = () => {
     logoutUser(user!._id);
   };
 
-
   const { user } = useTypedSelectorHook(state => state.users);
 
   return (

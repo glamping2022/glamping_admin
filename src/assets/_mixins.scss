@@ -35,7 +35,7 @@
     } //375px
   }
   @if $breakpoint == Iphone5 {
-    @media only screen and (max-width: 20.000em) {
+    @media only screen and (max-width: 20em) {
       @content;
     } //320px
   }

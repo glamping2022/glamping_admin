@@ -1,7 +1,6 @@
 @import '../../../../assets/mixins.scss';
 @import '../../../../components/UI/variables';
 
-
 .location {
   background: $primary2;
   padding: 80px 0 100px;
@@ -15,7 +14,7 @@
 
   @include respond(big-tablets) {
     max-width: 720px;
-    flex-direction: column;  
+    flex-direction: column;
     padding: 40px 10px;
   }
 
@@ -38,7 +37,7 @@
 
   @include respond(big-tablets) {
     max-width: 720px;
-    flex-direction: row;  
+    flex-direction: row;
     padding: 0;
     margin-left: 5px;
   }
@@ -72,7 +71,7 @@
   }
 
   @include respond(Iphone5) {
-    padding: 0; 
+    padding: 0;
     text-align: center;
   }
 }
@@ -80,9 +79,9 @@
 .location-header-row {
   display: flex;
   padding-bottom: 16px;
-  
+
   @include respond(big-tablets) {
-    text-align: right; 
+    text-align: right;
     margin-right: -220px;
   }
 
@@ -90,23 +89,22 @@
     text-align: right;
     margin-right: 0;
   }
-  
+
   @include respond(IphonePlus) {
     margin-left: 23%;
   }
 
-  @include respond(Iphone6) { 
+  @include respond(Iphone6) {
     margin-left: 15%;
   }
-  
+
   @include respond(Iphone5) {
     margin-left: 10%;
   }
 }
 
-
 .location-header__link {
-  color: #69A042;
+  color: #69a042;
   position: relative;
   margin-right: 15px;
   font-size: 18px;
@@ -136,7 +134,7 @@
   background-image: url('../../../../assets/img/location.png');
 
   @include respond(small-phone) {
-    top: 20px
+    top: 20px;
   }
 }
 
@@ -157,17 +155,17 @@
 }
 
 .location-header__button_transparent {
-  border: 2px solid #FDD74E;
-  background-color: #FDD74E;
+  border: 2px solid #fdd74e;
+  background-color: #fdd74e;
   color: #2f2d25;
   max-width: 88px;
   margin-right: 33px;
   @include respond(IphonePlus) {
-    margin-left: 100px;;
+    margin-left: 100px;
   }
   &:hover {
     transition: all 0.2s;
-    border: 2px solid #FDD74E;
+    border: 2px solid #fdd74e;
     background-color: #fff;
     color: #2f2d25;
   }
@@ -191,21 +189,20 @@
   @include respond(Iphone5) {
     margin-left: 70px;
   }
-  &:hover{
+  &:hover {
     border-bottom: 2px solid #69a042;
     transition: all 0.2s;
   }
 }
 
 .ant-col {
-  margin: 0
+  margin: 0;
 }
-
 
 .ant-col-6 {
   display: flex;
   flex-basis: 13%;
-  
+
   @include respond(big-tablets) {
     max-width: 50%;
     margin: 0 20px;

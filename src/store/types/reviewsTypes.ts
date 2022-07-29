@@ -65,7 +65,6 @@ interface IFetchReviewPagesErrorAction {
 interface IFetchReviewsSuccessAction {
   type: ReviewsActionTypes.FETCH_REVIEWS_SUCCESS;
   payload: Array<IReview>;
-  page: number;
 }
 
 interface IFetchReviewsFailureAction {
