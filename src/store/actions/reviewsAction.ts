@@ -31,7 +31,7 @@ export const fetchReviews = (productId: string): any => {
 export const fetchAllReviews = (): any => {
   return async (dispatch: Dispatch<ReviewsAction>) => {
     try {
-      const response = await ax.get('reviews');
+      const response = await ax.get('reviews/all');
       dispatch({ type: ReviewsActionTypes.FETCH_REVIEWS_SUCCESS, payload: response.data });
     } catch (error) {
       dispatch({ type: ReviewsActionTypes.FETCH_REVIEWS_FAILURE, payload: 'Ошибка при получении данных' });

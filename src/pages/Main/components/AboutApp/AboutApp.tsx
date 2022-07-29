@@ -12,6 +12,7 @@ import {
 import { useActions } from '../../../../hooks/useAction';
 import { useTypedSelectorHook } from '../../../../hooks/useTypedSelector';
 import LocationItem from '../../../Main/components/LocationMini/components/LocationItem';
+import ReviewsItem from '../Reviews/ReviewsItem/ReviewsItem';
 import StoreItem from '../Store/StoreItem/StoreItem';
 
 const { Content } = Layout;
@@ -138,6 +139,47 @@ const AboutApp: React.FC = () => {
     );
   });
 
+  //reviews
+  const newReviews = () => {
+    const AppReviews = reviews.filter(review => {
+      return review.published === false;
+    });
+    return AppReviews;
+  };
+  
+  const publishReviews = () => {
+    const publishedReviews = reviews.filter(review => {
+      return review.published === true;
+    });
+    return publishedReviews;
+  };
+
+  const AppReviewsList = newReviews().map(review => {
+    return (
+      <Col key={review._id} className='gutter-row'>
+        <ReviewsItem
+          _id={review._id}
+          pros={review.pros}
+          cons={review.cons}
+          review={review.review}
+        />
+      </Col>
+    );
+  });
+
+  const ReviewsList = publishReviews().map(review => {
+    return (
+      <Col key={review._id} className='gutter-row'>
+        <ReviewsItem
+          _id={review._id}
+          pros={review.pros}
+          cons={review.cons}
+          review={review.review}
+        />
+      </Col>
+    );
+  });
+
   //applicationsProducts
   //product
   const newApplicationProducts = () => {
@@ -153,6 +195,8 @@ const AboutApp: React.FC = () => {
     });
     return publishedProducts;
   };
+
+  
 
   const newApplicationProductsList = newAppProducts().map(product => {
     return (
@@ -217,7 +261,7 @@ const AboutApp: React.FC = () => {
             <Input className='tab' type='radio' name='tab-btn' id='tab-btn-5' value='' />
             <label htmlFor='tab-btn-5'>Заявки на покупку модуля</label>
             <Input className='tab' type='radio' name='tab-btn' id='tab-btn-6' value='' />
-            <label htmlFor='tab-btn-6'>Комментарии / Отзывы</label>
+            <label htmlFor='tab-btn-6'>Комментарии / Отзывы: {newReviews().length} </label>
             <div id='content-1'>
               <div id='content-1'>
                 <Layout className='applicationGlamping'>
@@ -251,7 +295,17 @@ const AboutApp: React.FC = () => {
             
             </div>
             <div id='content-5'>Заявки на покупку модуля</div>
-            <div id='content-6'>Комментарии</div>
+            <div id='content-6'>
+              <Layout className='applicationGlamping'>
+                <Content>
+                  <Row>{AppReviewsList}</Row>
+                  {/* <div >
+                      {noPages ? <></> : <Pagination total={totalPages} onChange={onChange} />}
+                    </div> */}
+                    {/* <GoBack /> */}
+                </Content>
+              </Layout>
+            </div>
           </div>
         </section>
         <section id='content2'>

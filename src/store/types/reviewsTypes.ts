@@ -5,6 +5,7 @@ export interface IReview {
   review: string;
   date: any;
   user: any;
+  published: boolean;
   rating: number;
   accommodation?: any;
 }
