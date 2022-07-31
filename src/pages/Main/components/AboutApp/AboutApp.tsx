@@ -12,6 +12,7 @@ import {
 import { useActions } from '../../../../hooks/useAction';
 import { useTypedSelectorHook } from '../../../../hooks/useTypedSelector';
 import LocationItem from '../../../Main/components/LocationMini/components/LocationItem';
+import ApplicationProductItem from '../ApplicationProduct/ApplicationProductItem';
 import ReviewsItem from '../Reviews/ReviewsItem/ReviewsItem';
 import StoreItem from '../Store/StoreItem/StoreItem';
 
@@ -37,16 +38,9 @@ const AboutApp: React.FC = () => {
     fetchAllAppProducts();
   }, []);
 
-  console.log(reviews);
+  console.log(applicationsProducts);
   
-  
-//location
-  // const onChangeLocation = (pageNumber: number) => {
-  //   fetchNextLocationPages(pageNumber - 1);
-  // };
-
-  // const totalPages = Number(pages) * 10;
-  // const noPages = totalPages < 1;
+  //location
   const newAppLocations = () => {
     const AppLocations = locations.filter(location => {
       return location.published === false;
@@ -181,52 +175,39 @@ const AboutApp: React.FC = () => {
   });
 
   //applicationsProducts
-  //product
   const newApplicationProducts = () => {
-    const AppProducts = applicationsProducts.filter(product => {
-      return product.published === false;
+    const AppProducts = applicationsProducts.filter(applicationsProduct => {
+      return applicationsProduct.published === false;
     });
     return AppProducts;
   };
   
   const publishApplicationProducts = () => {
-    const publishedProducts = applicationsProducts.filter(product => {
-      return product.published === true;
+    const publishedProducts = applicationsProducts.filter(applicationsProduct => {
+      return applicationsProduct.published === true;
     });
     return publishedProducts;
   };
 
-  
-
-  const newApplicationProductsList = newAppProducts().map(product => {
+  const newApplicationProductsList = newApplicationProducts().map(applicationsProduct => {
     return (
-      <Col key={product._id} className='gutter-row' style={{ margin: 10 }}>
-        <StoreItem
-          _id={product._id}
-          title={product.title}
-          price={product.price}
-          rating={5}
-          image={product.image}
-          category={product.categoryId.title}
-          season={product.season}
-          roominess={product.roominess}
+      <Col key={applicationsProduct._id} className='gutter-row' style={{ margin: 10 }}>
+        <ApplicationProductItem
+          _id={applicationsProduct._id}
+          poductId={applicationsProduct.poductId}
+          userId={applicationsProduct.userId}
         />
       </Col>
     );
   });
   
-  const publishedApplicationProductsList = publishProducts().map(product => {
+  const publishedApplicationProductsList = publishApplicationProducts().map(applicationsProduct => {
     return (
-      <Col key={product._id} className='gutter-row' style={{ margin: 10 }}>
-        <StoreItem
-          _id={product._id}
-          title={product.title}
-          price={product.price}
-          rating={5}
-          image={product.image}
-          category={product.categoryId.title}
-          season={product.season}
-          roominess={product.roominess}
+      <Col key={applicationsProduct._id} className='gutter-row' style={{ margin: 10 }}>
+        <ApplicationProductItem
+          _id={applicationsProduct._id}
+          poductId={applicationsProduct.poductId}
+          userId={applicationsProduct.userId}
         />
       </Col>
     );
@@ -259,7 +240,7 @@ const AboutApp: React.FC = () => {
             <Input className='tab' type='radio' name='tab-btn' id='tab-btn-4' value='' />
             <label htmlFor='tab-btn-4'>Заявки на продажу модуля: {newAppProducts().length}</label>
             <Input className='tab' type='radio' name='tab-btn' id='tab-btn-5' value='' />
-            <label htmlFor='tab-btn-5'>Заявки на покупку модуля</label>
+            <label htmlFor='tab-btn-5'>Заявки на покупку модуля: {newApplicationProducts().length}</label>
             <Input className='tab' type='radio' name='tab-btn' id='tab-btn-6' value='' />
             <label htmlFor='tab-btn-6'>Комментарии / Отзывы: {newReviews().length} </label>
             <div id='content-1'>
@@ -294,7 +275,17 @@ const AboutApp: React.FC = () => {
               </div>
             
             </div>
-            <div id='content-5'>Заявки на покупку модуля</div>
+            <div id='content-5'>
+            <Layout className='applicationGlamping'>
+                <Content>
+                  <Row>{newApplicationProductsList}</Row>
+                  {/* <div >
+                      {noPages ? <></> : <Pagination total={totalPages} onChange={onChange} />}
+                    </div> */}
+                    {/* <GoBack /> */}
+                </Content>
+              </Layout>
+            </div>
             <div id='content-6'>
               <Layout className='applicationGlamping'>
                 <Content>
