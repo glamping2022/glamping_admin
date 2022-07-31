@@ -10,7 +10,7 @@ import {
 export const fetchAllAppProducts = (): any => {
   return async (dispatch: Dispatch<ApplicationsProductsAction>) => {
     try {
-      const response = await ax.get('products');
+      const response = await ax.get('applicationsProducts');
       dispatch({ type: ApplicationsProductsActionTypes.FETCH_APPLICATIONS_PRODUCT_SUCCESS, payload: response.data });
     } catch (error) {
       dispatch({ type: ApplicationsProductsActionTypes.FETCH_APPLICATIONS_PRODUCT_FAILURE, payload: 'Ошибка при получении данных' });

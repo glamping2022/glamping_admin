@@ -1,0 +1,216 @@
+@import '../../../../assets/mixins';
+@import '../../../../components/UI/variables';
+
+.applicationProduct {
+  background: $primary2;
+  padding: 80px 0 100px;
+}
+
+.applicationProduct-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-left: 15px;
+
+  @include respond(big-tablets) {
+    max-width: 720px;
+    flex-direction: column;
+    padding: 40px 10px;
+  }
+
+  @include respond(small-tablets) {
+    max-width: 650px;
+  }
+
+  @include respond(Iphone6) {
+    max-width: 320px;
+  }
+
+  @include respond(Iphone5) {
+    margin-right: 25px !important;
+  }
+}
+
+.applicationProduct-header {
+  display: flex;
+  justify-content: space-between;
+
+  @include respond(big-tablets) {
+    max-width: 720px;
+    flex-direction: row;
+    padding: 0;
+    margin-left: 5px;
+  }
+
+  @include respond(small-tablets) {
+    max-width: 650px;
+  }
+
+  @include respond(IphonePlus) {
+    flex-direction: column;
+  }
+  @include respond(Iphone6) {
+    padding-top: 30px;
+  }
+  @include respond(Iphone5) {
+    margin: 0 0;
+  }
+}
+
+.applicationProduct-title {
+  @extend %caption2;
+  color: $primary1;
+  padding-left: 25px;
+
+  @include respond(big-tablets) {
+    margin-bottom: 0;
+  }
+
+  @include respond(IphonePlus) {
+    text-align: center;
+  }
+
+  @include respond(Iphone5) {
+    padding: 0;
+    text-align: center;
+  }
+}
+
+.applicationProduct-header-row {
+  display: flex;
+  padding-bottom: 16px;
+
+  @include respond(big-tablets) {
+    text-align: right;
+    margin-right: -220px;
+  }
+
+  @include respond(small-tablets) {
+    text-align: right;
+    margin-right: 0;
+  }
+
+  @include respond(IphonePlus) {
+    margin-left: 23%;
+  }
+
+  @include respond(Iphone6) {
+    margin-left: 15%;
+  }
+
+  @include respond(Iphone5) {
+    margin-left: 10%;
+  }
+}
+
+.applicationProduct-header__link {
+  color: #69a042;
+  position: relative;
+  margin-right: 15px;
+  font-size: 18px;
+  border-bottom: 2px solid $primary2;
+
+  @include respond(big-tablets) {
+    margin: 5px 0 0 30px;
+  }
+  @include respond(small-phone) {
+    margin-left: 20px;
+    text-align: center;
+    padding-top: 20px;
+  }
+  &:hover {
+    border-bottom: 2px solid #69a042;
+    transition: all 0.2s;
+  }
+}
+
+.applicationProduct-header__link::before {
+  content: '';
+  position: absolute;
+  height: 24px;
+  width: 24px;
+  top: 0;
+  right: 160px;
+
+  @include respond(small-phone) {
+    top: 20px;
+  }
+}
+
+.applicationProduct-header__text {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 21px;
+  color: #2f2d25;
+  margin: 11px 18px 0 0;
+
+  @include respond(big-tablets) {
+    margin: 11px 18px 0 50px;
+  }
+
+  @include respond(IphonePlus) {
+    margin-left: 50px;
+  }
+}
+
+.applicationProduct-header__button_transparent {
+  border: 2px solid #fdd74e;
+  background-color: #fdd74e;
+  color: #2f2d25;
+  max-width: 88px;
+  margin-right: 33px;
+  @include respond(IphonePlus) {
+    margin-left: 100px;
+  }
+  &:hover {
+    transition: all 0.2s;
+    border: 2px solid #fdd74e;
+    background-color: #fff;
+    color: #2f2d25;
+  }
+}
+
+.location__link {
+  @extend %textGreen;
+  margin: 5px 0 50px 25px;
+  border-bottom: 2px solid $primary2;
+  display: inline-block;
+
+  @include respond(big-tablets) {
+    margin-left: 40px;
+  }
+  @include respond(IphonePlus) {
+    margin-left: 115px;
+  }
+  @include respond(Iphone6) {
+    margin-left: 95px;
+  }
+  @include respond(Iphone5) {
+    margin-left: 70px;
+  }
+  &:hover {
+    border-bottom: 2px solid #69a042;
+    transition: all 0.2s;
+  }
+}
+
+.ant-col {
+  margin: 0;
+}
+
+.ant-col-6 {
+  display: flex;
+  flex-basis: 13%;
+
+  @include respond(big-tablets) {
+    max-width: 50%;
+    margin: 0 20px;
+  }
+}
+
+.ant-row {
+  max-width: 1440px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
