@@ -2,12 +2,7 @@ import './AboutApp.scss';
 
 import React, { useEffect } from 'react';
 
-import {
-  Col,
-  Input,
-  Layout,
-  Row,
-} from 'antd';
+import { Col, Input, Layout, Row } from 'antd';
 
 import { useActions } from '../../../../hooks/useAction';
 import { useTypedSelectorHook } from '../../../../hooks/useTypedSelector';
@@ -21,8 +16,8 @@ const { Content } = Layout;
 const AboutApp: React.FC = () => {
   const { user } = useTypedSelectorHook(state => state.users);
   document.documentElement.scrollTop = 0;
-  const { locations} = useTypedSelectorHook(state => state.locations);
-  const { products} = useTypedSelectorHook(state => state.products);
+  const { locations } = useTypedSelectorHook(state => state.locations);
+  const { products } = useTypedSelectorHook(state => state.products);
   const { reviews } = useTypedSelectorHook(state => state.reviews);
   const { applicationsProducts } = useTypedSelectorHook(state => state.productApplications);
 
@@ -39,7 +34,7 @@ const AboutApp: React.FC = () => {
   }, []);
 
   console.log(applicationsProducts);
-  
+
   //location
   const newAppLocations = () => {
     const AppLocations = locations.filter(location => {
@@ -91,7 +86,7 @@ const AboutApp: React.FC = () => {
     });
     return AppProducts;
   };
-  
+
   const publishProducts = () => {
     const publishedProducts = products.filter(product => {
       return product.published === true;
@@ -115,7 +110,7 @@ const AboutApp: React.FC = () => {
       </Col>
     );
   });
-  
+
   const publishedProductsList = publishProducts().map(product => {
     return (
       <Col key={product._id} className='gutter-row' style={{ margin: 10 }}>
@@ -140,7 +135,7 @@ const AboutApp: React.FC = () => {
     });
     return AppReviews;
   };
-  
+
   const publishReviews = () => {
     const publishedReviews = reviews.filter(review => {
       return review.published === true;
@@ -151,12 +146,7 @@ const AboutApp: React.FC = () => {
   const AppReviewsList = newReviews().map(review => {
     return (
       <Col key={review._id} className='gutter-row'>
-        <ReviewsItem
-          _id={review._id}
-          pros={review.pros}
-          cons={review.cons}
-          review={review.review}
-        />
+        <ReviewsItem _id={review._id} pros={review.pros} cons={review.cons} review={review.review} />
       </Col>
     );
   });
@@ -164,12 +154,7 @@ const AboutApp: React.FC = () => {
   const ReviewsList = publishReviews().map(review => {
     return (
       <Col key={review._id} className='gutter-row'>
-        <ReviewsItem
-          _id={review._id}
-          pros={review.pros}
-          cons={review.cons}
-          review={review.review}
-        />
+        <ReviewsItem _id={review._id} pros={review.pros} cons={review.cons} review={review.review} />
       </Col>
     );
   });
@@ -181,7 +166,7 @@ const AboutApp: React.FC = () => {
     });
     return AppProducts;
   };
-  
+
   const publishApplicationProducts = () => {
     const publishedProducts = applicationsProducts.filter(applicationsProduct => {
       return applicationsProduct.published === true;
@@ -200,7 +185,7 @@ const AboutApp: React.FC = () => {
       </Col>
     );
   });
-  
+
   const publishedApplicationProductsList = publishApplicationProducts().map(applicationsProduct => {
     return (
       <Col key={applicationsProduct._id} className='gutter-row' style={{ margin: 10 }}>
@@ -213,11 +198,11 @@ const AboutApp: React.FC = () => {
     );
   });
 
-  let test: any = "hello"; 
+  let test: any = 'hello';
   test = 23;
-  
+
   return (
-    <div id='container'>
+    <div id='container' style={{ backgroundColor: 'white' }}>
       <div className='tabs'>
         <Input className='tab' id='tab1' type='radio' name='tabs' />
         <label htmlFor='tab1'>Новые заявки</label>
@@ -229,7 +214,7 @@ const AboutApp: React.FC = () => {
         <label htmlFor='tab4'>Инвесторы</label>
         <Input className='tab' id='tab5' type='radio' name='tabs' />
         <label htmlFor='tab5'>Потенциальные инвесторы</label>
-        <section id='content1'>
+        <section id='content1' className='applications__section'>
           <div className='InSide'>
             <Input className='tab' type='radio' name='tab-btn' id='tab-btn-1' value='' />
             <label htmlFor='tab-btn-1'>Заявки на создание глэмпинга: {newAppLocations().length}</label>
@@ -244,95 +229,94 @@ const AboutApp: React.FC = () => {
             <Input className='tab' type='radio' name='tab-btn' id='tab-btn-6' value='' />
             <label htmlFor='tab-btn-6'>Комментарии / Отзывы: {newReviews().length} </label>
             <div id='content-1'>
-              <div id='content-1'>
+              <div id='content-1' style={{ padding: 15 }}>
                 <Layout className='applicationGlamping'>
                   <Content>
-                    <Row>{AppLocationsList}</Row>
+                    <Row style={{ justifyContent: 'space-around' }}>{AppLocationsList}</Row>
                     {/* <div >
                       {noPages ? <></> : <Pagination total={totalPages} onChange={onChange} />}
                     </div> */}
                   </Content>
                 </Layout>
-              </div> 
+              </div>
             </div>
             <div id='content-2'>Заявки на бронирование питчи</div>
             <div id='content-3'>Заявки на создание размешения(sharing)</div>
             <div id='content-4'>
               <div id='content-1'>
                 <Layout className='applicationGlamping'>
-              <Content>
-                <Row>{newProductsList}</Row>
-                {/* <div className='pagination'>
+                  <Content>
+                    <Row style={{ justifyContent: 'space-around' }}>{newProductsList}</Row>
+                    {/* <div className='pagination'>
                   {noPagesProduct ? (
                     <></>
                   ) : (
                     <Pagination className='pagination-list' total={totalPagesProduct} onChange={onChange} current={currentPage} />
                   )}
                 </div> */}
-                {/* <GoBack /> */}
-              </Content>
-            </Layout>
+                    {/* <GoBack /> */}
+                  </Content>
+                </Layout>
               </div>
-            
             </div>
             <div id='content-5'>
-            <Layout className='applicationGlamping'>
+              <Layout className='applicationGlamping'>
                 <Content>
-                  <Row>{newApplicationProductsList}</Row>
+                  <Row style={{ justifyContent: 'space-around' }}>{newApplicationProductsList}</Row>
                   {/* <div >
                       {noPages ? <></> : <Pagination total={totalPages} onChange={onChange} />}
                     </div> */}
-                    {/* <GoBack /> */}
+                  {/* <GoBack /> */}
                 </Content>
               </Layout>
             </div>
             <div id='content-6'>
               <Layout className='applicationGlamping'>
                 <Content>
-                  <Row>{AppReviewsList}</Row>
+                  <Row style={{ justifyContent: 'space-around' }}>{AppReviewsList}</Row>
                   {/* <div >
                       {noPages ? <></> : <Pagination total={totalPages} onChange={onChange} />}
                     </div> */}
-                    {/* <GoBack /> */}
+                  {/* <GoBack /> */}
                 </Content>
               </Layout>
             </div>
           </div>
         </section>
-        <section id='content2'>
+        <section id='content2' className='locations__section'>
           <div id='content-1'>
             <Layout className='applicationGlamping'>
               <Content>
-                <Row>{locationsList}</Row>
+                <Row style={{ justifyContent: 'space-around' }}>{locationsList}</Row>
                 {/* <div >
                     {noPages ? <></> : <Pagination total={totalPages} onChange={onChange} />}
                   </div> */}
-                  {/* <GoBack /> */}
+                {/* <GoBack /> */}
               </Content>
             </Layout>
           </div>
         </section>
-        <section id='content3'>
+        <section id='content3' className='products__section'>
           <div id='content-1'>
             <Layout className='applicationGlamping'>
               <Content>
-                <Row>{publishedProductsList}</Row>
-                  {/* <div className='pagination'>
+                <Row style={{ justifyContent: 'space-around' }}>{publishedProductsList}</Row>
+                {/* <div className='pagination'>
                     {noPagesProduct ? (
                       <></>
                     ) : (
                       <Pagination className='pagination-list' total={totalPagesProduct} onChange={onChange} current={currentPage} />
                     )}
                   </div> */}
-                  {/* <GoBack /> */}
+                {/* <GoBack /> */}
               </Content>
-            </Layout>      
+            </Layout>
           </div>
         </section>
-        <section id='content4'>
+        <section id='content4' style={{ display: 'none' }}>
           <p>Описание4</p>
         </section>
-        <section id='content5'>
+        <section id='content5' style={{ display: 'none' }}>
           <p>Описание5</p>
         </section>
       </div>
