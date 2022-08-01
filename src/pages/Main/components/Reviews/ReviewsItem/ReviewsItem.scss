@@ -118,6 +118,7 @@
     text-align: center;
     padding-top: 20px;
   }
+
   &:hover {
     border-bottom: 2px solid #69a042;
     transition: all 0.2s;
@@ -162,6 +163,7 @@
   @include respond(IphonePlus) {
     margin-left: 100px;
   }
+
   &:hover {
     transition: all 0.2s;
     border: 2px solid #fdd74e;
@@ -188,6 +190,7 @@
   @include respond(Iphone5) {
     margin-left: 70px;
   }
+
   &:hover {
     border-bottom: 2px solid #69a042;
     transition: all 0.2s;

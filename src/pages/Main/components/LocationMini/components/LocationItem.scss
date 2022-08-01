@@ -8,6 +8,7 @@
 }
 
 .location-item__card {
+  margin-bottom: 25px;
   height: 428px;
   width: 320px;
   display: -webkit-box;
@@ -32,29 +33,6 @@
     background-color: $primary3;
   }
 }
-
-//.ant-card-meta-title {
-//  font-size: 24px;
-//  @include respond(Iphone6) {
-//    margin-top: 8px !important;
-//    margin-bottom: 0 !important;
-//    font-size: 14px !important;
-//    line-height: 170% !important;
-//    text-align: left !important;
-//  }
-//}
-//
-//.ant-card-body {
-//  padding: 0 24px;
-//  text-align: center;
-//
-//  @include respond(small-tablets) {
-//    padding: 0;
-//  }
-//  @include respond(Iphone6) {
-//    text-align: left !important;
-//  }
-//}
 
 .item__square {
   font-family: Roboto;

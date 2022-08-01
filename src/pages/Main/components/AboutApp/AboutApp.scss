@@ -1,6 +1,10 @@
 @import '../../../../assets/mixins.scss';
 @import '../../../../components/UI/variables';
 
+.ant-layout {
+  background-color: white;
+}
+
 .about_app {
   background-color: #f9faf7;
   @include respond(big-tablets) {
@@ -13,7 +17,7 @@
 }
 
 #content-1 {
-  width: 1700px;
+  //width: 1700px;
 }
 
 .applicationGlamping {
@@ -61,13 +65,14 @@
 }
 
 .tabs {
-  width: 2000px;
-  padding: 0px;
+  background-color: white;
+  padding: 0;
   margin: 0;
   position: relative;
-  border: 1px solid #dee8f2;
+  border-top: 1px solid #dee8f2;
 }
-section {
+
+.applications__section {
   display: none;
   padding: 15px;
   background: white;
@@ -75,12 +80,33 @@ section {
   top: 0;
   left: 180px;
 }
+
+.locations__section {
+  display: none;
+  padding-left: 15px;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 180px;
+}
+
+.products__section {
+  display: none;
+  padding-left: 15px;
+  background: white;
+  position: absolute;
+  top: 0;
+  left: 180px;
+}
+
 p {
   margin: 0;
 }
+
 input {
   display: none;
 }
+
 label {
   display: block;
   width: 180px;
@@ -89,13 +115,16 @@ label {
   background: #dee8f2;
   cursor: pointer;
 }
+
 label:hover {
   color: $primary3;
 }
+
 input:checked + label {
   color: $primary3;
   background: white;
 }
+
 #tab1:checked ~ #content1,
 #tab2:checked ~ #content2,
 #tab3:checked ~ #content3,
@@ -109,9 +138,11 @@ input:checked + label {
 #tab11:checked ~ #content11 {
   display: block;
 }
+
 section {
   animation: scale 0.7s ease-in-out;
 }
+
 @keyframes scale {
   0% {
     transform: scale(0.9);
