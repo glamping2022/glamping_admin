@@ -1,0 +1,18 @@
+@import '../../../../../../assets/mixins.scss';
+
+.ProductDetailGallery {
+  margin-left: 90px;
+  max-width: 80%;
+  @include respond(IPad) {
+    margin-left: 0;
+    max-width: 760px;
+  }
+}
+
+.image-gallery {
+  width: 100%;
+}
+
+.image-gallery-image {
+  cursor: zoom-in;
+}

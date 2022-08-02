@@ -1,0 +1,119 @@
+@import './src/components/UI/variables';
+@import '../../../../../../assets/mixins.scss';
+
+.product__title {
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 44px;
+  color: $primary1;
+}
+
+.product__price {
+  font-size: 24px;
+  line-height: 28px;
+  color: $primary1;
+  margin-bottom: 32px;
+}
+
+.product__desc {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  color: $primary1;
+  margin-bottom: 32px;
+  max-width: 500px;
+}
+
+.product__options {
+  display: flex;
+}
+
+.options {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.icon-triangle {
+  background-image: url("../../../../../../assets/icons/i-triangle-black.svg");
+  @extend %i-image;
+  color: $primary1;
+}
+
+.icon-share {
+  background-image: url("../../../../../../assets/icons/i-share-black.svg");
+  @extend %i-image;
+  color: $primary1;
+}
+
+.icon-metal {
+  background-image: url("../../../../../../assets/icons/i-metal-black.svg");
+  @extend %i-image;
+  color: $primary1;
+}
+
+.icon-car {
+  background-image: url("../../../../../../assets/icons/i-car-black.svg");
+  @extend %i-image;
+  color: $primary1;
+}
+
+.icon-bed {
+  background-image: url("../../../../../../assets/icons/i-bed-black.svg");
+  @extend %i-image;
+  color: $primary1;
+}
+
+.icon-sun {
+  background-image: url("../../../../../../assets/icons/i-sun-black.svg");
+  @extend %i-image;
+  color: $primary1;
+}
+
+.icon-snowflake {
+  background-image: url("../../../../../../assets/icons/i-snowflake-black.svg");
+  @extend %i-image;
+  color: $primary1;
+}
+
+.icon-all {
+  background-image: url("../../../../../../assets/icons/i-all-black.svg");
+  @extend %i-image;
+  color: $primary1;
+}
+
+
+.product-detail-description {
+  padding-left: 5%;
+}
+
+.reviews {
+  color: #69a042;
+}
+
+.reviews:hover {
+  color: #c4e0a6;
+}
+
+.ant-form-vertical .ant-form-item {
+  display: inline-grid;
+}
+
+.ant-form-vertical .ant-form-item-label {
+  padding-bottom: 0;
+}
+
+.link {
+  margin-top: 32px;
+
+  .order__link {
+    @extend %text-btn;
+    padding: 12px 107px 32px;
+    @include respond(small-phone) {
+      padding: 12px 90px 32px;
+    }
+    @include respond(Iphone5) {
+      padding: 12px 70px 32px;
+    }
+  }
+}
