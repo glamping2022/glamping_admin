@@ -2,10 +2,7 @@ import './StoreItem.scss';
 
 import React from 'react';
 
-import {
-  Button,
-  Card,
-} from 'antd';
+import { Button, Card } from 'antd';
 import { Link } from 'react-router-dom';
 
 import config from '../../../../../settings/config';
@@ -48,10 +45,9 @@ const StoreItem: React.FC<IModuleCardProps> = ({ title, price, image, _id, categ
         {roominess === 9 ? <span className='icon-bed'>9</span> : null}
         <p>{price.replace(/(\d)(?=(\d{3})+(\D|$))/g, '$1 ')} ₸ / шт</p>
         <Button className='item__button' onClick={clickHandler}>
-          Заказать
+          Подробнее
         </Button>
       </Card>
-      
     </Link>
   );
 };

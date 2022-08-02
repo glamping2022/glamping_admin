@@ -1,0 +1,52 @@
+@import '../../assets/mixins';
+@import "../../components/UI/variables";
+
+
+.current-location {
+  padding-top: 10px;
+  color: $primary1;
+  @include respond(IPad) {
+    padding-top: 0;
+    margin-top: -40px !important;
+  }
+
+  .current__location-row {
+    @include respond(IPad) {
+      flex-direction: column-reverse !important;
+    }
+
+    .current__location-description {
+    }
+
+    .current__location-img {
+      align-self: flex-start;
+      @include respond(IPad) {
+        align-self: center;
+      }
+    }
+  }
+}
+
+.wrap {
+  background-color: $primary2;
+  padding-bottom: 72px;
+}
+
+.current-location-card {
+  @include respond(big-tablets) {
+    max-width: 720px;
+    flex-direction: column;
+  }
+
+  @include respond(small-tablets) {
+    max-width: 650px;
+  }
+
+  @include respond(small-phone) {
+    max-width: 330px;
+  }
+}
+
+.wrap-review {
+  padding-left: 45px;
+}

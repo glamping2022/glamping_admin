@@ -1,0 +1,14 @@
+@import '../../../../assets/mixins.scss';
+
+.CurrentLocationGallery {
+  width: 90%;
+  margin: 0 auto;
+  @include respond(IPad) {
+    margin-left: 0;
+    max-width: 760px;
+  }
+}
+
+.image-gallery-image {
+  cursor: zoom-in;
+}
