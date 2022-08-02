@@ -88,14 +88,14 @@ const ProductDetailDescription: React.FC<ICurrentProductProps> = ({
           <span className='options'>{factory}</span>
         </div>
       </div>
-      <div style={{ marginTop: 32, marginBottom: 32, maxWidth: 500 }}>
-        <Divider />
-      </div>
-      <div className='link'>
-        <Button className='order__link' onClick={handleClick}>
-          Подать заявку
-        </Button>
-      </div>
+      {/*<div style={{ marginTop: 32, marginBottom: 32, maxWidth: 500 }}>*/}
+      {/*  <Divider />*/}
+      {/*</div>*/}
+      {/*<div className='link'>*/}
+      {/*  <Button className='order__link' onClick={handleClick}>*/}
+      {/*    Подать заявку*/}
+      {/*  </Button>*/}
+      {/*</div>*/}
     </div>
   );
 };

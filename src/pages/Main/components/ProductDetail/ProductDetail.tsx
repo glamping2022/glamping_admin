@@ -42,7 +42,7 @@ const ProductDetail: React.FC = (props: any) => {
           </Col>
         </Row>
       </div>
-      <div style={{ margin: '0 0 10px 0' }}>
+      <div style={{ margin: '20px 0 20px 30px' }}>
         <GoBack />
       </div>
     </div>
