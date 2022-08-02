@@ -10,6 +10,7 @@ import { useTypedSelectorHook } from './hooks/useTypedSelector';
 import Login from './pages/Login/Login';
 import Main from './pages/Main/Main';
 import ProductDetail from './pages/Main/components/ProductDetail/ProductDetail';
+import CurrentLocation from './pages/CurrentLocation/CurrentLocation';
 
 function App(): JSX.Element {
   document.documentElement.scrollTop = 0;
@@ -23,6 +24,7 @@ function App(): JSX.Element {
         <Switch>
           <ProtectedRoute isAllowed={!user} path='/login' exact redirectTo='/' component={Login} />
           <Route path='/storedetail/:id' exact component={ProductDetail} />
+          <Route path='/locations/:id' exact component={CurrentLocation} />
         </Switch>
       </div>
       {location.pathname === '/' || location.pathname === '/register' || location.pathname === '/login' ? null : (

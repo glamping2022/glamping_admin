@@ -1,0 +1,197 @@
+@import '../../../../assets/mixins.scss';
+@import '../../../../components/UI/variables';
+
+.location-description {
+  font-size: 14px;
+  line-height: 24px;
+  color: $primary1;
+  font-weight: 300;
+  padding-left: 4%;
+  @include respond(IPad) {
+    padding-left: 2%;
+    margin-top: 20px !important;
+  }
+}
+
+.location-description-icon {
+  background-image: url("../../../../assets/icons/i-location.svg");
+  background-repeat: no-repeat;
+  background-position-y: 2px;
+  padding-left: 20px;
+}
+
+.location-grid {
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 0.1rem;
+}
+
+.icons {
+  background-repeat: no-repeat;
+  background-position-y: 10px;
+  padding: 10px 10px 0 15px;
+}
+
+.icon-water {
+  background-image: url("../../../../assets/icons/i-water.svg");
+}
+
+.icon-nursery {
+  background-image: url("../../../../assets/icons/i-nursery.svg");
+}
+
+.icon-fireplace {
+  background-image: url("../../../../assets/icons/i-fireplace.svg");
+}
+
+.icon-electricity {
+  background-image: url("../../../../assets/icons/i-electricity.svg");
+}
+
+.icon-grill {
+  background-image: url("../../../../assets/icons/i-grill.svg");
+}
+
+.icon-summerhouse {
+  background-image: url("../../../../assets/icons/i-summerhouse.svg");
+  background-position-y: 11px;
+}
+
+.icon-wifi {
+  background-image: url("../../../../assets/icons/i-wifi.svg");
+}
+
+.icon-pharmacy {
+  background-image: url("../../../../assets/icons/i-pharmacy.svg");
+}
+
+.icon-laundry {
+  background-image: url("../../../../assets/icons/i-laundry.svg");
+  background-position-y: 13px;
+}
+
+.icon-restaurant {
+  background-image: url("../../../../assets/icons/i-restaurant.svg");
+}
+
+.icon-store {
+  background-image: url("../../../../assets/icons/i-store.svg");
+}
+
+.icon-cafe {
+  background-image: url("../../../../assets/icons/i-cafe.svg");
+}
+
+.icon-ramp {
+  background-image: url("../../../../assets/icons/i-ramp.svg");
+}
+
+.icon-dogplayground {
+  background-image: url("../../../../assets/icons/i-dogsplayground.svg");
+}
+
+.icon-motorbike {
+  background-image: url("../../../../assets/icons/i-moto.svg");
+  background-position-y: 12px;
+}
+
+.icon-parking {
+  background-image: url("../../../../assets/icons/i-parking.svg");
+}
+
+.icon-hiking {
+  background-image: url("../../../../assets/icons/i-hiking.svg");
+}
+
+.icon-riding {
+  background-image: url("../../../../assets/icons/i-riding.svg");
+}
+
+.icon-road {
+  background-image: url("../../../../assets/icons/i-road.svg");
+}
+
+.icon-biking {
+  background-image: url("../../../../assets/icons/i-biking.svg");
+}
+
+.icon-pool {
+  background-image: url("../../../../assets/icons/i-pool.svg");
+}
+
+.icon-cinema {
+  background-image: url("../../../../assets/icons/i-cinema.svg");
+}
+
+.icon-playground {
+  background-image: url("../../../../assets/icons/i-playground.svg");
+}
+
+.icon-indoorpool {
+  background-image: url("../../../../assets/icons/i-indoorpool.svg");
+}
+
+.icon-minizoo {
+  background-image: url("../../../../assets/icons/i-minizoo.svg");
+}
+
+.icon-sports {
+  background-image: url("../../../../assets/icons/i-sports.svg");
+}
+
+.icon-beach {
+  background-image: url("../../../../assets/icons/i-beach.svg");
+}
+
+.icon-boardgames {
+  background-image: url("../../../../assets/icons/i-boardgames.svg");
+}
+
+.icon-volleyball {
+  background-image: url("../../../../assets/icons/i-volleyball.svg");
+}
+
+.icon-aquapark {
+  background-image: url("../../../../assets/icons/i-aquapark.svg");
+}
+
+.icon-yoga {
+  background-image: url("../../../../assets/icons/i-yoga.svg");
+}
+
+.icon-golf {
+  background-image: url("../../../../assets/icons/i-golf.svg");
+}
+
+.icon-sauna {
+  background-image: url("../../../../assets/icons/i-sauna.svg");
+}
+
+.icon-tennis {
+  background-image: url("../../../../assets/icons/i-tennis.svg");
+}
+
+.icon-fishing {
+  background-image: url("../../../../assets/icons/i-fishing.svg");
+}
+
+.icon-alpinism {
+  background-image: url("../../../../assets/icons/i-alpinism.svg");
+}
+
+.icon-diving {
+  background-image: url("../../../../assets/icons/i-diving.svg");
+}
+
+.icon-trekking {
+  background-image: url("../../../../assets/icons/i-trekking.svg");
+}
+
+.anticon-check-square,
+.anticon-minus-square {
+  margin-right: 10px;
+}
+
+.infrastructure {
+}
