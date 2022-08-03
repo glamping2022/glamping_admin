@@ -214,7 +214,7 @@ const AboutApp: React.FC = () => {
         <label htmlFor='tab4'>Инвесторы</label>
         <Input className='tab' id='tab5' type='radio' name='tabs' />
         <label htmlFor='tab5'>Потенциальные инвесторы</label>
-        <section id='content1' className='applications__section'>
+        <section id='content1' className='section'>
           <div className='InSide'>
             <Input className='tab' type='radio' name='tab-btn' id='tab-btn-1' value='' />
             <label htmlFor='tab-btn-1'>Заявки на создание глэмпинга: {newAppLocations().length}</label>
@@ -283,7 +283,7 @@ const AboutApp: React.FC = () => {
             </div>
           </div>
         </section>
-        <section id='content2' className='locations__section'>
+        <section id='content2' className='section'>
           <div id='content-1'>
             <Layout className='applicationGlamping'>
               <Content>
@@ -296,7 +296,7 @@ const AboutApp: React.FC = () => {
             </Layout>
           </div>
         </section>
-        <section id='content3' className='products__section'>
+        <section id='content3' className='section'>
           <div id='content-1'>
             <Layout className='applicationGlamping'>
               <Content>

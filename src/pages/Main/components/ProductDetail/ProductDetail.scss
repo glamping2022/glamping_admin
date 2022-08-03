@@ -1,0 +1,60 @@
+@import '../../../../assets/mixins.scss';
+@import '../../../../components/UI/variables';
+
+.content_body {
+  background-color: $primary2;
+}
+
+.border {
+  border: 1px solid black;
+}
+
+.product-wrap {
+  @include respond(IPad) {
+    margin-top: 10px !important;
+  }
+}
+
+.wrapper-top {
+  margin-top: 55px;
+
+  .product__detail-row {
+    @include respond(IPad) {
+      flex-direction: column-reverse;
+    }
+
+    .product__detail-col {
+      @include respond(IPad) {
+        margin-top: 32px !important;
+        margin-left: -80px;
+      }
+      @include respond(small-phone) {
+        margin-left: -30px;
+      }
+    }
+
+    .product__detail-img {
+      align-self: flex-start;
+    }
+  }
+}
+
+.wrapper-bottom {
+  margin-top: 170px;
+  margin-left: 55px;
+  @include respond(small-tablets) {
+    margin-left: 30px;
+  }
+  @include respond(small-phone) {
+    margin-left: 20px;
+  }
+  @include respond(Iphone6) {
+    margin-left: 0;
+  }
+}
+
+.wrapper-top {
+  @include respond(small-tablets) {
+    flex-direction: row;
+  }
+}
